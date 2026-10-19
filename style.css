@@ -1,0 +1,394 @@
+
+/* ==============================
+   1. DASAR WEBSITE
+============================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #163B40;
+    background: #FFFFFF;
+}
+
+
+/* ==============================
+   2. HEADER PROFIL MODERN
+============================== */
+
+header {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+        120deg,
+        #215B63 0%,
+        #124170 65%,
+        #0D304F 100%
+    );
+    color: #FFFFFF;
+    padding: 30px;
+    border-radius: 14px 14px 0 0;
+}
+
+/* Susunan foto dan informasi profil */
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Bingkai foto profil */
+
+.foto-profil {
+    flex-shrink: 0;
+    padding: 5px;
+    border-radius: 50%;
+    background: linear-gradient(
+        135deg,
+        #AAFFC7,
+        #67C090
+    );
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Foto profil */
+
+.foto-profil img {
+    display: block;
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #215B63;
+}
+
+
+/* Efek glow pada foto profil */
+
+.foto-profil {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.foto-profil:hover {
+    box-shadow:
+        0 0 12px #AAFFC7,
+        0 0 25px rgba(170, 255, 199, 0.7);
+    transform: scale(1.05);
+}
+
+
+/* Informasi profil */
+
+.info-profil {
+    min-width: 0;
+}
+
+.sapaan {
+    margin: 0 0 8px;
+    color: #AAFFC7;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.info-profil h1 {
+    margin: 0 0 8px;
+    color: #FFFFFF;
+    font-size: 32px;
+}
+
+.status-profil {
+    margin: 0 0 6px;
+    color: #AAFFC7;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.deskripsi-profil {
+    margin: 0;
+    color: #E5F5EC;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* ==============================
+   3. NAVIGASI LAPTOP
+============================== */
+
+nav {
+    background: linear-gradient(
+        110deg,
+        #67C090,
+        #215B63,
+        #124170
+    );
+    padding: 15px 20px;
+}
+
+.nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li a {
+    display: block;
+    padding: 9px 15px;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.nav li a:hover {
+    background: linear-gradient(
+        90deg,
+        #4c0909e1,
+        #dddada
+    );
+    color: #f4f7f8;
+}
+
+/* ==============================
+   4. SECTION
+============================== */
+
+.konten-utama {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+section {
+    min-height: 180px;
+    padding: 25px;
+    background: linear-gradient(
+        120deg,
+        #124170,
+        #215B63,
+        #67C090
+    );
+    color: #FFFFFF;
+    overflow-wrap: anywhere;
+}
+
+section h2 {
+    margin-top: 0;
+    color: #fafbfc;
+}   
+
+section p {
+    line-height: 1.8;
+    margin: 8px 0;
+}
+
+/* ==============================
+   5. ASIDE
+============================== */
+
+aside {
+    min-height: 120px;
+    padding: 25px;
+    background: linear-gradient(
+        120deg,
+        #215B63,
+        #124170
+    );
+    color: #FFFFFF;
+    overflow-wrap: anywhere;
+}
+
+aside h2 {
+    margin-top: 0;
+    color: #AAFFC7;
+}
+
+
+aside p {
+    line-height: 1.6;
+}
+
+
+/* ==============================
+   6. FOOTER
+============================== */
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    gap: 15px;
+
+    padding: 18px 25px;
+    color: #FFFFFF;
+
+    background: linear-gradient(
+        110deg,
+        #215B63,
+        #589d6fc8
+    );
+
+    border-radius: 0 0 14px 14px;
+}
+
+.footer-kiri {
+    text-align: left;
+}
+
+.footer-tengah {
+    text-align: center;
+    font-weight: bold;
+}
+
+.footer-kanan {
+    text-align: right;
+    font-weight: bold;
+}
+
+.footer-kiri p,
+.footer-tengah p,
+.footer-kanan p {
+    margin: 4px 0;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+footer a {
+    color: #AAFFC7;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+/* FOOTER DI HP */
+
+@media screen and (max-width: 600px) {
+    footer {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .footer-kiri,
+    .footer-tengah,
+    .footer-kanan {
+        text-align: center;
+    }
+
+    .footer-kiri p,
+    .footer-tengah p,
+    .footer-kanan p {
+        font-size: 12px;
+    }
+}
+
+
+
+/* ==============================
+   7. TAMPILAN HP
+============================== */
+
+@media screen and (max-width: 600px) {
+
+    body {
+        padding: 8px;
+    }
+
+    /* HEADER */
+
+    header {
+        padding: 20px 14px;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .foto-profil img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .info-profil h1 {
+        font-size: 23px;
+    }
+
+    .sapaan {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .status-profil {
+        font-size: 13px;
+    }
+
+    .deskripsi-profil {
+        font-size: 12px;
+    }
+
+    /* NAVIGASI */
+
+    nav {
+        padding: 10px 6px;
+    }
+
+    .nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .nav li a {
+        padding: 8px;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    /* SECTION */
+
+    section {
+        min-height: 160px;
+        padding: 16px;
+    }
+
+    /* ASIDE */
+
+    aside {
+        min-height: 100px;
+        padding: 16px;
+    }
+
+    section p,
+    aside p {
+        font-size: 14px;
+    }
+
+    /* FOOTER */
+
+    footer {
+        padding: 15px 8px;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+
+}
+
